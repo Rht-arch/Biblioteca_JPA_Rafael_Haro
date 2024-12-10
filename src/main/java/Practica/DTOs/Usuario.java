@@ -1,11 +1,11 @@
-package DTOs;
+package Practica.DTOs;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
+import jakarta.persistence.*;
+
 
 import java.time.LocalDate;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 public class Usuario {
@@ -27,10 +27,15 @@ public class Usuario {
 
     @Lob
     @Column(name = "tipo", nullable = false)
-    private String tipo;
+    private TipoUsuario tipo;
 
     @Column(name = "penalizacionHasta")
     private LocalDate penalizacionHasta;
+    @OneToMany(mappedBy = "usuario")
+    private Set<Prestamo> prestamos = new LinkedHashSet<>();
+    public enum TipoUsuario {
+        NORMAL, ADMINISTRADOR
+    }
 
     public Integer getId() {
         return id;
@@ -72,12 +77,12 @@ public class Usuario {
         this.password = password;
     }
 
-    public String getTipo() {
+    public TipoUsuario getTipo() {
         return tipo;
     }
 
     public void setTipo(String tipo) {
-        this.tipo = tipo;
+        this.tipo = TipoUsuario.valueOf(tipo);
     }
 
     public LocalDate getPenalizacionHasta() {

@@ -1,4 +1,4 @@
-package DTOs;
+package Practica.DTOs;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

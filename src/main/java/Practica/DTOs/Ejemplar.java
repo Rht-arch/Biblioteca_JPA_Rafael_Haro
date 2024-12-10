@@ -1,9 +1,12 @@
-package DTOs;
+package Practica.DTOs;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 public class Ejemplar {
@@ -14,12 +17,18 @@ public class Ejemplar {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "isbn", nullable = false)
-    private DTOs.Libro isbn;
+    private Libro isbn;
 
     @ColumnDefault("'Disponible'")
     @Lob
     @Column(name = "estado")
-    private String estado;
+    private EstadoEjemplar estado = EstadoEjemplar.DISPONIBLE;
+
+    @OneToMany(mappedBy = "ejemplar")
+    private Set<Prestamo> prestamos = new LinkedHashSet<>();
+    public enum EstadoEjemplar {
+        DISPONIBLE,PRESTADO,DAÑADO
+    }
 
     public Integer getId() {
         return id;
@@ -29,20 +38,20 @@ public class Ejemplar {
         this.id = id;
     }
 
-    public DTOs.Libro getIsbn() {
+    public Libro getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(DTOs.Libro isbn) {
+    public void setIsbn(Libro isbn) {
         this.isbn = isbn;
     }
 
-    public String getEstado() {
+    public EstadoEjemplar getEstado() {
         return estado;
     }
 
     public void setEstado(String estado) {
-        this.estado = estado;
+        this.estado = EstadoEjemplar.valueOf(estado);
     }
 
 }
