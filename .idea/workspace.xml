@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e9d98c0-fe87-4171-816f-76e93f2028ec" name="Changes" comment="Creación de los DAO restantes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Practica/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Practica/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/BibliotecaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/BibliotecaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/Conexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DAOs/EjemplarDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DAOs/EjemplarDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DAOs/LibroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DAOs/LibroDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DAOs/PrestamoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DAOs/PrestamoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DAOs/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DAOs/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DTOs/Ejemplar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DTOs/Ejemplar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DTOs/Prestamo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DTOs/Prestamo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DTOs/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DTOs/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-    </list>
+    <list default="true" id="4e9d98c0-fe87-4171-816f-76e93f2028ec" name="Changes" comment="Modificamos DAOs y DTOs, persitence, terminamos de configurar el BibliotecaService y creamos el Menu y el Main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +107,7 @@
       <workItem from="1733815369772" duration="111000" />
       <workItem from="1733816395677" duration="723000" />
       <workItem from="1733861794987" duration="5965000" />
-      <workItem from="1733940415415" duration="6287000" />
+      <workItem from="1733940415415" duration="6588000" />
     </task>
     <task id="LOCAL-00001" summary="Creación de los DAO restantes">
       <option name="closed" value="true" />
@@ -131,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733875505217</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Modificamos DAOs y DTOs, persitence, terminamos de configurar el BibliotecaService y creamos el Menu y el Main">
+      <option name="closed" value="true" />
+      <created>1733947012620</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733947012620</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +133,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creación de los DAO restantes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creación de los DAO restantes" />
+    <MESSAGE value="Modificamos DAOs y DTOs, persitence, terminamos de configurar el BibliotecaService y creamos el Menu y el Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificamos DAOs y DTOs, persitence, terminamos de configurar el BibliotecaService y creamos el Menu y el Main" />
   </component>
 </project>
