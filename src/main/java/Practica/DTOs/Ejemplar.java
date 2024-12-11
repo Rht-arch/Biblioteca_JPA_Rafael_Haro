@@ -21,13 +21,15 @@ public class Ejemplar {
 
     @ColumnDefault("'Disponible'")
     @Lob
+    @Enumerated(EnumType.STRING)
     @Column(name = "estado")
-    private EstadoEjemplar estado = EstadoEjemplar.DISPONIBLE;
+    private EstadoEjemplar estado = EstadoEjemplar.Disponible;
 
     @OneToMany(mappedBy = "ejemplar")
     private Set<Prestamo> prestamos = new LinkedHashSet<>();
+
     public enum EstadoEjemplar {
-        DISPONIBLE,PRESTADO,DAÑADO
+        Disponible, Prestado, Dañado
     }
 
     public Integer getId() {
@@ -54,4 +56,12 @@ public class Ejemplar {
         this.estado = EstadoEjemplar.valueOf(estado);
     }
 
+    @Override
+    public String toString() {
+        return "Ejemplar{" +
+                "id=" + id +
+                ", estado=" + estado +
+                ", libroIsbn='" + (isbn != null ? isbn.getIsbn() : "N/A") + '\'' +
+                '}';
+    }
 }

@@ -33,5 +33,11 @@ public class UsuarioDAO {
             em.close();
         }
     }
+    public Usuario buscarUsuario(int usuarioId) {
+        tx.begin();
+        Usuario usuario = em.find(Usuario.class, usuarioId);
+        tx.commit();
+        return usuario;
+    }
 
 }

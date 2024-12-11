@@ -25,7 +25,7 @@ public class EjemplarDAO {
     public int calcularStockDisponible(String isbn) {
         try {
             // Consulta para contar los ejemplares disponibles de un libro específico
-            String jpql = "SELECT COUNT(e) FROM Ejemplar e WHERE e.isbn = :isbn AND e.estado = 'DISPONIBLE'";
+            String jpql = "SELECT COUNT(e) FROM Ejemplar e WHERE e.isbn.isbn = :isbn AND e.estado = 'DISPONIBLE'";
             Query query = em.createQuery(jpql);
             query.setParameter("isbn", isbn);
             // Convertir el resultado al tipo entero

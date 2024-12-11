@@ -49,7 +49,7 @@ public class PrestamoDAO {
             }
 
             // Validar estado del ejemplar
-            if (!ejemplar.getEstado().equals(Ejemplar.EstadoEjemplar.DISPONIBLE)) {
+            if (!ejemplar.getEstado().equals(Ejemplar.EstadoEjemplar.Disponible)) {
                 throw new IllegalStateException("El ejemplar no está disponible para préstamo.");
             }
 
@@ -61,7 +61,7 @@ public class PrestamoDAO {
             prestamo.setFechaDevolucion(null);
 
             // Cambiar estado del ejemplar
-            ejemplar.setEstado(String.valueOf(Ejemplar.EstadoEjemplar.PRESTADO));
+            ejemplar.setEstado(String.valueOf(Ejemplar.EstadoEjemplar.Prestado));
 
             // Persistir cambios
             em.persist(prestamo);
@@ -89,7 +89,7 @@ public class PrestamoDAO {
 
             // Cambiar estado del ejemplar a DISPONIBLE
             Ejemplar ejemplar = prestamo.getEjemplar();
-            ejemplar.setEstado(String.valueOf(Ejemplar.EstadoEjemplar.DISPONIBLE));
+            ejemplar.setEstado(String.valueOf(Ejemplar.EstadoEjemplar.Disponible));
 
             // Persistir cambios
             em.merge(prestamo);

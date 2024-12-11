@@ -68,4 +68,14 @@ public class Prestamo {
         this.fechaDevolucion = fechaDevolucion;
     }
 
+    @Override
+    public String toString() {
+        return "Prestamo{" +
+                "id=" + id +
+                ", usuario=" + usuario +
+                ", ejemplar=" + ejemplar +
+                ", fechaInicio=" + fechaInicio +
+                ", fechaDevolucion=" + fechaDevolucion +
+                '}';
+    }
 }

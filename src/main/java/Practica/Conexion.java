@@ -5,31 +5,25 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
 public class Conexion {
-    static EntityManagerFactory managerFactory;
-    static EntityManager em;
+    private static EntityManagerFactory managerFactory;
 
-    public static EntityManagerFactory getEntityManager() {
+    // Método para obtener o inicializar el EntityManagerFactory
+    public static EntityManagerFactory getEntityManagerFactory() {
         if (managerFactory == null) {
-            return managerFactory;
-        }else{
-            managerFactory= Persistence.createEntityManagerFactory("biblioteca");
-            return managerFactory;
+            managerFactory = Persistence.createEntityManagerFactory("biblioteca");
         }
-    }
-    public static void cerrar(){
-        if(managerFactory!=null && managerFactory.isOpen()){
-            managerFactory.close();
-
-        }
+        return managerFactory;
     }
 
+    // Método para obtener un EntityManager
     public static EntityManager getEm() {
-        if(em!=null){
-            return em;
-        }else{
-            getEntityManager();
-            em = managerFactory.createEntityManager();
-            return em;
+        return getEntityManagerFactory().createEntityManager();
+    }
+
+    // Método para cerrar el EntityManagerFactory
+    public static void cerrar() {
+        if (managerFactory != null && managerFactory.isOpen()) {
+            managerFactory.close();
         }
     }
 }

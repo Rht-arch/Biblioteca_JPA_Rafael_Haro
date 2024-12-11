@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e9d98c0-fe87-4171-816f-76e93f2028ec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Practica/DAOs/UsuarioDAO.java" afterDir="false" />
+    <list default="true" id="4e9d98c0-fe87-4171-816f-76e93f2028ec" name="Changes" comment="Creación de los DAO restantes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Practica/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Practica/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/BibliotecaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/BibliotecaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/Conexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DAOs/EjemplarDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DAOs/EjemplarDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DAOs/LibroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DAOs/LibroDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DAOs/PrestamoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DAOs/PrestamoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DAOs/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DAOs/UsuarioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DTOs/Ejemplar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DTOs/Ejemplar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DTOs/Prestamo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DTOs/Prestamo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Practica/DTOs/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Practica/DTOs/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,18 +35,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Rht-arch"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rht-arch&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Rht-arch/Biblioteca_JPA_Rafael_Haro.git",
-    "accountId": "62118057-0257-41fe-a325-74e73d385644"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Rht-arch/Biblioteca_JPA_Rafael_Haro.git&quot;,
+    &quot;accountId&quot;: &quot;62118057-0257-41fe-a325-74e73d385644&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -55,6 +65,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.Menu.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
@@ -108,11 +120,25 @@
       <updated>1733815368676</updated>
       <workItem from="1733815369772" duration="111000" />
       <workItem from="1733816395677" duration="723000" />
-      <workItem from="1733861794987" duration="5748000" />
+      <workItem from="1733861794987" duration="5965000" />
+      <workItem from="1733940415415" duration="6287000" />
     </task>
+    <task id="LOCAL-00001" summary="Creación de los DAO restantes">
+      <option name="closed" value="true" />
+      <created>1733875505217</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733875505217</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creación de los DAO restantes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación de los DAO restantes" />
   </component>
 </project>

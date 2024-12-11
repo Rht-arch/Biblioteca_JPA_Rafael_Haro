@@ -20,6 +20,12 @@ public class LibroDAO {
         tx.commit();
         return 1;
     }
+    public Libro buscarLibro(String isbn) {
+        tx.begin();
+        Libro libro = em.find(Libro.class, isbn);
+        tx.commit();
+        return libro;
+    }
     public ArrayList<Libro> consultarLibro() {
         tx.begin();
         ArrayList<Libro> libros = (ArrayList<Libro>) em.createQuery("from Libro").getResultList();

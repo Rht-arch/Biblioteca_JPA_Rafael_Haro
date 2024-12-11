@@ -10,6 +10,7 @@ import java.util.Set;
 @Entity
 public class Usuario {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
@@ -26,6 +27,7 @@ public class Usuario {
     private String password;
 
     @Lob
+    @Enumerated(EnumType.STRING)
     @Column(name = "tipo", nullable = false)
     private TipoUsuario tipo;
 
@@ -34,7 +36,7 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario")
     private Set<Prestamo> prestamos = new LinkedHashSet<>();
     public enum TipoUsuario {
-        NORMAL, ADMINISTRADOR
+        normal, administrador
     }
 
     public Integer getId() {
@@ -102,8 +104,6 @@ public class Usuario {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", tipo=" + tipo +
-                ", penalizacionHasta=" + penalizacionHasta +
-                ", prestamos=" + prestamos +
                 '}';
     }
 }
