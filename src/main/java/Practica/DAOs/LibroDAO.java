@@ -4,6 +4,8 @@ import Practica.DTOs.Libro;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 
+import java.util.ArrayList;
+
 public class LibroDAO {
     EntityManager em;
     EntityTransaction tx;
@@ -17,6 +19,11 @@ public class LibroDAO {
         em.persist(libro);
         tx.commit();
         return 1;
-
+    }
+    public ArrayList<Libro> consultarLibro() {
+        tx.begin();
+        ArrayList<Libro> libros = (ArrayList<Libro>) em.createQuery("from Libro").getResultList();
+        tx.commit();
+        return libros;
     }
 }

@@ -9,6 +9,7 @@ import jakarta.persistence.EntityTransaction;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class PrestamoDAO {
     EntityManager em;
@@ -129,5 +130,17 @@ public class PrestamoDAO {
             if (tx.isActive()) tx.rollback();
             e.printStackTrace();
         }
+    }
+    public ArrayList<Prestamo> getTodosPrestamos() {
+        tx.begin();
+        ArrayList<Prestamo> prestamos = (ArrayList<Prestamo>) em.createQuery("select p from Prestamo p", Prestamo.class).getResultList();
+        tx.commit();
+        return prestamos;
+    }
+    public ArrayList<Prestamo> getPrestamosPorId(int usuarioId) {
+        tx.begin();
+        ArrayList<Prestamo> prestamos = (ArrayList<Prestamo>) em.createQuery("SELECT p FROM Prestamo p WHERE p.usuario.id = :usuarioId", Prestamo.class).setParameter("usuarioId", usuarioId).getResultList();
+        tx.commit();
+        return prestamos;
     }
 }
